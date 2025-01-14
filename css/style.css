@@ -1,0 +1,128 @@
+body {
+    background-color: #E2CE1A;
+    height: 90vh;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skambo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .skambo {
+        display: grid;
+        grid-template-columns: 30% 70%;     
+        width: unset;
+    }
+}
+
+.skambo-head {
+    padding: 96px 36px 20px 36px;
+    background-color: #36320A;
+    color: #ffffff;
+}
+
+.skambo-head img {
+    margin-left: -10px;
+}
+
+.skambo-head p {
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.skambo-head span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skambo-head button {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 10px 40px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.skambo-head .skambo-head-forgot {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.skambo-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FEFAA1;
+    padding: 55px 53px;
+}
+
+.skambo-form form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skambo-form .skambo-form-head h2 {
+    text-align: center;
+    margin-bottom: unset;
+}
+
+.skambo-form .skambo-form-head p {
+    font-size: 12px;
+    text-align: center;
+    margin-top: unset;
+}
+
+.skambo-form form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skambo-form form label .skambo-required{
+    display: none;
+    font-size: 12px;
+    color: red;
+}
+
+.skambo-form form label input {
+    background-color: #E2CE1A;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.skambo-form form input {
+    background-color: #36320A;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 10px 40px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.skambo-form form input::placeholder {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 600;
+}

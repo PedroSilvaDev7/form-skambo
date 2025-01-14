@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadastro</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+   <section class="skambo">
+        <div class="skambo-head content">
+           <img src="./img/logo.png" alt="logo skambo" title="logo skambo" width="120" height="70">
+            <p>
+                <b>Seja bem vindo!</b><br/>
+                Acesse sua conta agora mesmo.
+            </p>
+            <span>
+                <button>Entrar</button>
+                <p class="skambo-head-forgot">Esqueci minha senha</p>
+            </span>
+        </div>
+        <div class="skambo-form content">
+            <div class="skambo-form-head">
+                <h2>Crie sua conta</h2>
+                <p>Preencha o Formulário</p>
+            </div>
+            <form id="form" action="" method="post">
+                <label for="nome">
+                    <input type="text" name="nome" class="nome required" placeholder="Nome" oninput="nameValidate(event)">
+                    <span class="skambo-required">Nome deve ter no minimo 3 caracteres</span>
+                </label>
+                <label for="email">
+                    <input type="email" name="email" class="email required" placeholder="Email" oninput="emailValidate(event)">
+                    <span class="skambo-required">Digite um email validos</span>
+                <label for="pass">
+                    <input type="password" name="pass" class="pass required" placeholder="Senha" oninput="passValidate()">
+                    <span class="skambo-required">Digete uma senha com no minimo 8 caracteres</span>
+                </label>
+                <input type="submit" name="submit" class="submit" value="cadastrar">
+            </form>
+        </div>
+   </section>
+<script src="./js/script.js"></script>
+</body>
+</html>
