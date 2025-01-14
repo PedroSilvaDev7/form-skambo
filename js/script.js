@@ -14,32 +14,44 @@ function removeError (index) {
 }
 
 function nameValidate(event) {
-    let valueName = event.target.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, "");
-    valueName = valueName.replace(/\b\w/g, (char) => char.toUpperCase());
-    event.target.value = valueName;
-    
-    if(campos[0].value.length < 3) {
-        setError(0);
-    } else {
-        removeError(0)
+    try {
+        let valueName = event.target.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, "");
+        valueName = valueName.replace(/\b\w/g, (char) => char.toUpperCase());
+        event.target.value = valueName;
+        
+        if(campos[0].value.length < 3) {
+            setError(0);
+        } else {
+            removeError(0)
+        }
+    } catch(erroName) {
+        console.error("O input trouxe esse erro: " + erroName)
     }
 }
 
 function emailValidate(event) {
-    let valueEmail = event.target.value.replace(/[^a-zA-Z0-9@._-]/g, "");
-    event.target.value = valueEmail;
+    try {
+        let valueEmail = event.target.value.replace(/[^a-zA-Z0-9@._-]/g, "");
+        event.target.value = valueEmail;
 
-    if (!emailRegex.test(campos[1].value)) {
-        setError(1);
-    } else {
-        removeError(1);
+        if (!emailRegex.test(campos[1].value)) {
+            setError(1);
+        } else {
+            removeError(1);
+        }
+    } catch(erroEmail) {
+        console.error("O input trouxe esse erro: " + erroEmail)
     }
 }
 
 function passValidate() {
-    if(campos[2].value.length < 8) {
-        setError(2);
-    } else {
-        removeError(2)
+    try {
+        if(campos[2].value.length < 8) {
+            setError(2);
+        } else {
+            removeError(2)
+        }
+    } catch(erroPass) {
+        console.error("O input trouxe esse erro: " + erroPass)
     }
 }
